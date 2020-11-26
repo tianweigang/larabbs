@@ -12,6 +12,7 @@
         <div class="card-body">
           <h5><strong>个人简介</strong></h5>
           <p>
+
             @if($user->introduction)
             {{$user->introduction}}
               @else 暂无简介~
@@ -19,7 +20,7 @@
           </p>
           <hr>
           <h5><strong>注册于</strong></h5>
-          <p>January 01 1901</p>
+          <p>{{ $user->created_at->diffForHumans() }}</p>
         </div>
       </div>
     </div>
